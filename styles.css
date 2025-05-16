@@ -24,7 +24,107 @@ nav {
     padding: 10px;
     background-color: #444;
 }
+/* Hamburger Button */
+.hamburger-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  transition: opacity 0.3s;
+}
+.hamburger-btn span {
+  width: 32px;
+  height: 4px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+  display: block;
+}
+.hamburger-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
 
+/* Overlay */
+.hamburger-menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 1000;
+}
+.hamburger-menu-overlay.open {
+  opacity: 1; pointer-events: all;
+}
+
+/* Menu (side panel) */
+.hamburger-nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 64px;
+  background: transparent;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.hamburger-menu {
+  position: fixed;
+  top: 0; left: -320px;
+  width: 320px; max-width: 85vw;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+  list-style: none;
+  padding: 80px 32px 0 32px;
+  margin: 0;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 1.5rem;
+  font-family: inherit;
+  transition: left 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.hamburger-menu.open {
+  left: 0;
+}
+.hamburger-menu li a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.hamburger-menu li a:hover {
+  color: #0055a5;
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  .hamburger-btn {
+    display: none;
+  }
+  .hamburger-menu,
+  .hamburger-menu-overlay {
+    display: none !important;
+  }
+}
 .menu li a {
     color: white;
     text-decoration: none;
