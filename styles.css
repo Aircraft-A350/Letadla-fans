@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    background-color: #444;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
