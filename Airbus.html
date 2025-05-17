@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Airbus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="menu" id="menu">
+    <li>
+        <a href="index.html">Úvod</a>
+    </li>
+    <li>
+        <a href="#">Výrobci letadel</a>
+        <ul>
+            <li><a href="Airbus.html">Airbus</a></li>
+            <li><a href="Boeing.html">Boeing</a></li>
+            <li><a href="#embraer">Embraer</a></li>
+            <li><a href="#bombardier">Bombardier</a></li>
+            <li><a href="#comac">COMAC</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Aerolinky</a>
+        <ul>
+            <li><a href="#emirates">Emirates</a></li>
+            <li><a href="#etihad">Etihad</a></li>
+            <li><a href="#airfrance">Air France</a></li>
+            <li><a href="#britishairways">British Airways</a></li>
+            <li><a href="#smartwings">Smartwings</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#letiste">Letiště</a>
+        <ul>
+            <li><a href="#vaclavhavel">Letiště Václava Havla Praha</a></li>
+            <li><a href="#brno">Letiště Vídeň</a></li>
+            <li><a href="#ostrava">Letiště Frankfurt nad Mohanem</a></li>
+        </ul>
+    </li>
+</ul>
+        </nav>
+    </header>
+
+    <h1 style="font-size:4em; text-align:center; margin-top:2em; font-weight:bold;">Airbus</h1>
+    <!-- Sem přidej další obsah o Airbusu -->
+
+    <p>Airbus je evropský výrobce letadel, který byl založen v roce 1970. Je známý svými inovativními technologiemi a širokým portfoliem letadel, včetně modelů A320, A350 a A380.</p>
+    <h2>Historie</h2>
+    <p>Airbus byl založen jako konsorcium několika evropských leteckých výrobců. První letadlo, Airbus A300, bylo uvedeno na trh v roce 1972 jako první dvoumotorové širokotrupé letadlo.</p>
+    <h2>Modely</h2>
+    <ul>
+        <li>A320: Nejoblíbenější model, který se používá na krátkých a středních tratích.</li>
+        <li>A350: Moderní širokotrupé letadlo určené pro dlouhé tratě.</li>
+        <li>A380: Největší pasažérské letadlo na světě, které může přepravit až 800 cestujících.</li>
+    </ul>
+    <h2>Inovace</h2>
+    <p>Airbus investuje značné prostředky do výzkumu a vývoje, aby zůstal na čele leteckého průmyslu. Mezi jeho inovace patří použití kompozitních materiálů a pokročilých avionických systémů.</p>
+
+    <h3>Odkaz na jejich oficiální stránky</h3>
+    <p>Pro více informací navštivte <a href="https://www.airbus.com" target="_blank">oficiální stránky Airbusu</a>.</p>
+
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            document.getElementById('menu').classList.toggle('show');
+        };
+
+        // Rozklikávání podmenu na kliknutí
+        document.querySelectorAll('.menu > li > a').forEach(link => {
+            link.onclick = function(e) {
+                const submenu = this.nextElementSibling;
+                if (submenu && submenu.tagName === 'UL') {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                }
+            };
+        });
+    </script>
+</body>
+</html>

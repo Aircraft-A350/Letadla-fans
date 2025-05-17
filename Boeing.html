@@ -2,19 +2,17 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letadla</title>
+    <title>Boeing</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <header>
         <nav>
             <div class="menu-icon" id="menu-icon">&#9776;</div>
             <ul class="menu" id="menu">
-                    <li>
-        <a href="index.html">Úvod</a>
-    </li>
+                <li>
+                    <a href="index.html">Úvod</a>
+                </li>
                 <li>
                     <a href="#">Výrobci letadel</a>
                     <ul>
@@ -36,26 +34,20 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#letiste">Letiště</a>
-                <ul>
-                    <li><a href="#vaclavhavel">Letiště Václava Havla Praha</a></li>
-                    <li><a href="#brno">Letiště Vídeň</a></li>
-                    <li><a href="#ostrava">Letiště Frankfurt nad Mohanem</a></li>
-                </ul>
-            </li>
+                    <a href="#">Letiště</a>
+                    <ul>
+                        <li><a href="#vaclavhavel">Letiště Václava Havla Praha</a></li>
+                        <li><a href="#brno">Letiště Vídeň</a></li>
+                        <li><a href="#ostrava">Letiště Frankfurt nad Mohanem</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <img class="hero-bg" src="images/emirates prague1.jpg" alt="Letadlo" style="opacity:1;">
-        <img class="hero-bg" src="images/csa1.jpg" alt="Letadlo" style="opacity:0;">
-        <img class="hero-bg" src="images/emirates prague2.jpg" alt="Letadlo" style="opacity:0;">
-        <div class="hero-content">
-            <h1>Fanoušci letadel</h1>
-            <p>Vítejte na stránkách věnovaných fanouškům letadel!</p>
-            <a href="#airbus" class="btn">Zjistit více</a>
-        </div>
-    </section>
+    <h1 style="font-size:4em; text-align:center; margin-top:2em; font-weight:bold;">Boeing</h1>
+    <!-- Sem přidej další obsah o Boeingu -->
+
     <script>
         document.getElementById('menu-icon').onclick = function() {
             document.getElementById('menu').classList.toggle('show');
@@ -72,20 +64,6 @@
             };
         });
 
-        // Slideshow pro obrázky v .hero
-        const slides = document.querySelectorAll('.hero-bg');
-        let current = 0;
-        setInterval(() => {
-            slides[current].style.opacity = 0;
-            current = (current + 1) % slides.length;
-            slides[current].style.opacity = 1;
-        }, 4000); // 4 sekundy na obrázek
-    </script>
-
-<p style="text-align:center; font-size:1.5em; font-weight:bold;">
-    Ahoj! Toto je stránka o letadlech. Zde se dozvíte více o různých výrobcích letadel, aerolinkách a letištích. Prozkoumejte naše sekce a zjistěte něco více o svém oblíbeném letadle nebo aerolince!
-</p>
-
-    
+   </script>
 </body>
 </html>
